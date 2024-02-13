@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 public class Recipe {
-    private @Id @GeneratedValue(strategy = GenerationType.AUTO) Long id;
+    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
     private String name;
     private String description;
 
