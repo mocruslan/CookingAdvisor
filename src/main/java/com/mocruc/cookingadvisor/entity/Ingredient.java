@@ -6,16 +6,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Recipe {
-    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
+public class Ingredient {
+    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY)  Long id;
     private String name;
     private String description;
 
-    protected Recipe() {}
+    protected Ingredient() {}
 
-    public Recipe(String name, String description) {
+    public Ingredient(String name, String description) {
         this.name = name;
         this.description = description;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getId() {
@@ -40,7 +44,7 @@ public class Recipe {
 
     @Override
     public String toString() {
-        return "Recipe{" +
+        return "Ingredient{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
